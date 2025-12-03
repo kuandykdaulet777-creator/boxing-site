@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Боксерские перчатки — Казахстанский Бокс</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-image: url("фон.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Верхняя часть */
+header {
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 50px 0 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+header h1 {
+  margin: 0;
+  font-size: 42px;
+  color: gold;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+header p {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* Навигация */
+nav {
+  background: linear-gradient(90deg, #111, #222);
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+/* Контейнер */
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+}
+
+/* Основной контент */
+img {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+h1 {
+  color: gold;
+  margin-top: 0;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+h2, h3 {
+  color: gold;
+  margin-top: 25px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+ul {
+  text-align: left;
+  color: #ddd;
+  font-size: 15px;
+}
+p {
+  color: #ddd;
+  line-height: 1.6;
+}
+.price {
+  font-size: 20px;
+  color: #ffea80;
+  margin-top: 10px;
+}
+.actions {
+  margin-top: 18px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  background: gold;
+  color: black;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background: #ffea80;
+  transform: scale(1.1);
+}
+.btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  margin-left: 10px;
+}
+.back {
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+.back:hover {
+  color: gold;
+}
+
+/* Нижняя часть */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 50px;
+}
+footer a {
+  color: gold;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .logo-left, .flag-right {
+    width: 60px;
+    top: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 0 8px;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Казахстанский Бокс</h1>
+  <p>Сила. Уважение. Традиции.</p>
+</header>
+
+<nav>
+  <a href="glavnaya.html">Главная</a>
+  <a href="boxers.html">Главные лица</a>
+  <a href="fights.html">Календарь боёв</a>
+  <a href="news.html">Свежие новости</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="equip.html">Экипировка</a>
+  <a href="avtor.html">Автор</a>
+</nav>
+
+<div class="container">
+  <a class="back" href="equip.html">← Вернуться к экипировке</a>
+
+  <div style="display:flex; gap:30px; flex-wrap:wrap; align-items:flex-start;">
+    <div style="flex:1 1 360px;">
+      <img src="Перчатки.png" alt="Боксерские перчатки">
+    </div>
+
+    <div style="flex:1 1 500px;">
+      <h2>Боксерские перчатки</h2>
+      <p>Премиум-кожа, идеальная амортизация и защита рук во время спарринга.</p>
+
+      <ul>
+        <li>✔ Материал: натуральная или искусственная кожа</li>
+        <li>✔ Амортизация ударов для защиты кистей</li>
+        <li>✔ Размеры: 8oz / 10oz / 12oz / 14oz</li>
+        <li>✔ Цвета: красный, синий, черный</li>
+        <li>✔ Подходят для тренировок и боев</li>
+      </ul>
+
+      <p class="price">Цена: 15 000 ₸</p>
+
+      <div class="actions">
+        <a class="btn" href="#">🛒 Добавить в корзину</a>
+        <a class="btn secondary" href="#">📞 Связаться</a>
+      </div>
+
+      <p style="margin-top:14px; color:#bbb; font-size:14px;">Отзывы: ⭐⭐⭐⭐☆ (4.8 / 5)</p>
+    </div>
+  </div>
+
+  <section style="margin-top:30px;">
+    <h3>Описание</h3>
+    <p>Эти перчатки обеспечивают надёжную защиту рук и комфорт во время интенсивных тренировок и спаррингов. Продуманная форма и амортизационные вставки смягчают удары.</p>
+
+    <h3>Инструкции по уходу</h3>
+    <ul>
+      <li>Протирать влажной тряпкой после тренировки</li>
+      <li>Не сушить на батарее или под прямыми солнечными лучами</li>
+      <li>Хранить в сухом месте</li>
+    </ul>
+  </section>
+
+  <a class="back" href="equip.html">← Вернуться к экипировке</a>
+</div>
+
+<footer>
+  © 2025 Казахстанский Бокс. Все права защищены. | <a href="contacts.html">Контакты</a>
+</footer>
+
+</body>
+</html>

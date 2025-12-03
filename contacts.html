@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Контакты</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url("фон.jpeg");   
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(90deg, #222 0%, #444 100%);
+      color: white;
+      text-align: center;
+      padding: 25px 0 15px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .logo-left, .flag-right {
+      position: absolute;
+      top: 15px;
+      width: 90px;
+      height: auto;
+      border: 2px solid white;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.7);
+      transition: transform 0.3s;
+    }
+    .logo-left:hover, .flag-right:hover {
+      transform: scale(1.1);
+    }
+    .logo-left { left: 20px; }
+    .flag-right { right: 20px; width: 140px; }
+
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      position: relative;
+      transition: color 0.3s;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ff4444;
+      transition: width 0.3s;
+    }
+    nav a:hover {
+      color: #ff4444;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      margin: 50px auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .container h2 {
+      text-align: center;
+      margin-top: 0;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #ffcccc;
+    }
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      transition: box-shadow 0.3s;
+    }
+    input:focus, textarea:focus {
+      box-shadow: 0 0 8px #ff4444;
+    }
+    button {
+      padding: 12px;
+      background: linear-gradient(90deg, #ff4444, #cc0000);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255,68,68,0.5);
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #aaa;
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+    /* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .logo-left, .flag-right {
+    width: 60px;
+    top: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 0 8px;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="kpbf.jpeg" alt="KPBF символ" class="logo-left">
+    <img src="flag.jpg" alt="Флаг Казахстана" class="flag-right">
+    <h1>Контакты</h1>
+   <nav>
+  <a href="glavnaya.html">Главная</a>
+  <a href="boxers.html">Главные лица</a>
+  <a href="fights.html">Календарь боёв</a>
+  <a href="news.html">Свежие новости</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="equip.html">Экипировка</a>
+  <a href="avtor.html">Автор</a>
+</nav>
+  </header>
+
+  <div class="container">
+    <h2>Связаться с нами</h2>
+    <form id="contact-form">
+      <label>Ваше имя:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Сообщение:</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Отправить</button>
+    </form>
+
+    <div class="contact-info">
+      <p>📧 Email: kuandykdaulet777@gmail.com</p>
+      <p>📞 Телефон: +7 (778) 358-34-96</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Сайт о боксёрах Казахстана © 2025</p>
+  </footer>
+
+  <!-- Подключение EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("BD3IbSCYlYvQ6RyBO"); // ваш Public Key
+    })();
+
+    // Обработка формы
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_jwl2yz4", "template_xmb3s5w", this)
+        .then(() => {
+          alert("✅ Сообщение успешно отправлено!");
+          this.reset();
+        }, (error) => {
+          console.error("Ошибка:", error);
+          alert("❌ Ошибка при отправке сообщения. Проверьте консоль для деталей.");
+        });
+    });
+  </script>
+
+</body>
+</html>

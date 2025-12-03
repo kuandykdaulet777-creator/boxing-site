@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Боксерские ботинки — Казахстанский Бокс</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-image: url("фон.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Верхняя часть */
+header {
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 50px 0 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+header h1 {
+  margin: 0;
+  font-size: 42px;
+  color: gold;
+  text-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+}
+header p {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* Навигация */
+nav {
+  background: linear-gradient(90deg, #111, #222);
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+/* Контейнер */
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+}
+
+/* Основной контент */
+img {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 2px solid gold;
+}
+h1 {
+  color: gold;
+  margin-top: 0;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+h2, h3 {
+  color: gold;
+  margin-top: 25px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+ul {
+  text-align: left;
+  color: #ddd;
+  font-size: 15px;
+}
+p {
+  color: #ddd;
+  line-height: 1.6;
+}
+.price {
+  font-size: 20px;
+  color: #ffea80;
+  margin-top: 10px;
+}
+.actions {
+  margin-top: 18px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  background: gold;
+  color: black;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background: #ffea80;
+  transform: scale(1.1);
+}
+.btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  margin-left: 10px;
+}
+.back {
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+.back:hover {
+  color: gold;
+}
+
+/* Нижняя часть */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 50px;
+}
+footer a {
+  color: gold;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Казахстанский Бокс</h1>
+  <p>Сила. Уважение. Традиции.</p>
+</header>
+
+<nav>
+  <a href="glavnaya.html">Главная</a>
+  <a href="boxers.html">Главные лица</a>
+  <a href="fights.html">Календарь боёв</a>
+  <a href="news.html">Свежие новости</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="equip.html">Экипировка</a>
+  <a href="avtor.html">Автор</a>
+</nav>
+
+<div class="container">
+  <a class="back" href="equip.html">← Вернуться к экипировке</a>
+
+  <div style="display:flex; gap:30px; flex-wrap:wrap; align-items:flex-start;">
+    <div style="flex:1 1 360px;">
+      <img src="Ботинки.png" alt="Боксерские ботинки">
+    </div>
+
+    <div style="flex:1 1 500px;">
+      <h2>Боксерские ботинки</h2>
+      <p>Лёгкие и устойчивые ботинки обеспечивают отличное сцепление с рингом и поддержку голеностопа.</p>
+
+      <ul>
+        <li>✔ Материал: высококачественная синтетическая кожа</li>
+        <li>✔ Подошва: нескользящая, гибкая</li>
+        <li>✔ Размеры: 36–46</li>
+        <li>✔ Цвета: черный, синий</li>
+        <li>✔ Лёгкий вес для максимальной мобильности</li>
+      </ul>
+
+      <p class="price">Цена: 18 000 ₸</p>
+
+      <div class="actions">
+        <a class="btn" href="#">🛒 Добавить в корзину</a>
+        <a class="btn secondary" href="#">📞 Связаться</a>
+      </div>
+
+      <p style="margin-top:14px; color:#bbb; font-size:14px;">Отзывы: ⭐⭐⭐⭐☆ (4.8 / 5)</p>
+    </div>
+  </div>
+
+  <section style="margin-top:30px;">
+    <h3>Описание</h3>
+    <p>Эти ботинки созданы для профессиональных и любительских боксерских тренировок. Надёжная фиксация стопы, лёгкая подошва и устойчивость к скольжению делают их идеальными для ринга.</p>
+
+    <h3>Инструкции по уходу</h3>
+    <ul>
+      <li>Протирать влажной тряпкой после тренировки</li>
+      <li>Не оставлять на солнце или возле батареи</li>
+      <li>Хранить в сухом месте</li>
+    </ul>
+  </section>
+
+  <a class="back" href="equip.html">← Вернуться к экипировке</a>
+</div>
+
+<footer>
+  © 2025 Казахстанский Бокс. Все права защищены. | <a href="contacts.html">Контакты</a>
+</footer>
+
+</body>
+</html>

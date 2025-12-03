@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Шлем защитный — Казахстанский Бокс</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-image: url("фон.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Верхняя часть */
+header {
+  background: rgba(0,0,0,0.75);
+  text-align: center;
+  padding: 50px 0 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+header h1 { margin: 0; font-size: 42px; color: gold; text-shadow: 0 0 20px rgba(255,215,0,0.7); }
+header p { margin-top: 10px; color: #ccc; font-size: 18px; }
+
+/* Корзина (SVG) */
+.cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: none;
+  z-index: 1000;
+}
+.cart-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: gold;
+  filter: drop-shadow(0 0 5px black);
+}
+
+/* Навигация */
+nav {
+  background: linear-gradient(90deg, #111, #222);
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+/* Контейнер */
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  border-radius: 15px;
+  position: relative;
+}
+
+/* Основной контент */
+img { width: 100%; max-width: 360px; border-radius: 10px; display: block; margin-bottom: 16px; }
+h1, h2, h3 { color: gold; text-shadow: 0 0 10px rgba(255,215,0,0.5); }
+.price { font-size: 20px; color: #ffea80; margin-top: 10px; }
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+.btn:hover { transform: scale(1.1); }
+.btn.secondary { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); margin-left: 10px; }
+.back { color: #ccc; text-decoration: none; display: inline-block; margin-bottom: 20px; transition: color 0.3s; }
+.back:hover { color: gold; }
+
+/* Летающее изображение */
+.fly-img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  border-radius: 10px;
+  transition: transform 1s cubic-bezier(0.5,-0.5,0.5,1.5), opacity 1s;
+  z-index: 1000;
+}
+
+/* Нижняя часть */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.85);
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 50px;
+}
+footer a { color: gold; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .logo-left, .flag-right {
+    width: 60px;
+    top: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 0 8px;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Казахстанский Бокс</h1>
+  <p>Сила. Уважение. Традиции.</p>
+</header>
+
+<div class="cart-icon">
+  <!-- SVG корзины -->
+  <svg viewBox="0 0 24 24">
+    <path d="M7 4h-2l-3 9v2h2l1 5h12l1-5h2v-2l-3-9h-2v-2h-6v2zm0 0h10v2h-10v-2zm2 12c-1.1 0-2 .9-2 2s.9 2 2 2c1.1 0 2-.9 2-2s-.9-2-2-2zm6 0c-1.1 0-2 .9-2 2s.9 2 2 2c1.1 0 2-.9 2-2s-.9-2-2-2z"/>
+  </svg>
+</div>
+
+<nav>
+  <a href="glavnaya.html">Главная</a>
+  <a href="boxers.html">Главные лица</a>
+  <a href="fights.html">Календарь боёв</a>
+  <a href="news.html">Свежие новости</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="equip.html">Экипировка</a>
+  <a href="avtor.html">Автор</a>
+</nav>
+
+<div class="container">
+  <a class="back" href="equip.html">← Вернуться к экипировке</a>
+
+  <div style="display:flex; gap:30px; flex-wrap:wrap; align-items:flex-start;">
+    <div style="flex:1 1 360px;">
+      <img src="Шлем.png" alt="Шлем защитный" id="product-image">
+    </div>
+
+    <div style="flex:1 1 500px;">
+      <h2>Шлем защитный</h2>
+      <p>Плотная пена и вентиляционные отверстия обеспечивают комфорт и защиту головы. Идеален для спаррингов и тренировок.</p>
+      <ul>
+        <li>✔ Материал: искусственная кожа высокого качества</li>
+        <li>✔ Регулируемые ремешки под подбородком</li>
+        <li>✔ Размеры: S / M / L</li>
+        <li>✔ Цвета: черный, красный, синий</li>
+        <li>✔ Вес: ~320 г</li>
+        <li>✔ Защита: лоб, виски и затылок</li>
+      </ul>
+      <p class="price">Цена: 12 000 ₸</p>
+
+      <div class="actions">
+        <div class="btn" id="add-to-cart">🛒 Добавить в корзину</div>
+        <a class="btn secondary" href="contacts.html">📞 Связаться</a>
+      </div>
+
+      <p style="margin-top:14px; color:#bbb; font-size:14px;">Отзывы: ⭐⭐⭐⭐☆ (4.7 / 5)</p>
+    </div>
+  </div>
+
+  <section style="margin-top:30px;">
+    <h3>Описание</h3>
+    <p>Этот шлем разработан для максимальной безопасности и комфорта во время интенсивных тренировок. Мягкая, но плотная внутренняя подкладка смягчает удары, а вентиляционные отверстия уменьшают нагрев. Ремни позволяют надёжно зафиксировать шлем на голове.</p>
+
+    <h3>Инструкции по уходу</h3>
+    <ul>
+      <li>Протирать влажной тряпкой после тренировки</li>
+      <li>Не сушить на батарее или под прямыми солнечными лучами</li>
+      <li>Хранить в сухом месте</li>
+    </ul>
+  </section>
+
+  <a class="back" href="equip.html">← Вернуться к экипировке</a>
+</div>
+
+<footer>
+  © 2025 Казахстанский Бокс. Все права защищены. | <a href="contacts.html">Контакты</a>
+</footer>
+
+<script>
+const btn = document.getElementById('add-to-cart');
+const productImg = document.getElementById('product-image');
+const cart = document.querySelector('.cart-icon');
+
+btn.addEventListener('click', () => {
+  const flyImg = productImg.cloneNode(true);
+  flyImg.classList.add('fly-img');
+  document.body.appendChild(flyImg);
+
+  const imgRect = productImg.getBoundingClientRect();
+  const cartRect = cart.getBoundingClientRect();
+
+  // начальная позиция
+  flyImg.style.left = imgRect.left + 'px';
+  flyImg.style.top = imgRect.top + 'px';
+  flyImg.style.width = imgRect.width + 'px';
+  flyImg.style.height = imgRect.height + 'px';
+
+  // задержка для рендеринга
+  requestAnimationFrame(() => {
+    const dx = cartRect.left + cartRect.width/2 - (imgRect.left + imgRect.width/2);
+    const dy = cartRect.top + cartRect.height/2 - (imgRect.top + imgRect.height/2);
+    flyImg.style.transform = `translate(${dx}px, ${dy}px) scale(0.2) rotate(720deg)`;
+    flyImg.style.opacity = 0;
+  });
+
+  // удалить после анимации
+  flyImg.addEventListener('transitionend', () => flyImg.remove());
+});
+</script>
+
+</body>
+</html>

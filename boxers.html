@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Известные боксёры Казахстана</title>
+    <style>
+           body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("фон.jpeg");   
+            background-size: cover;             
+            background-position: center;        
+            background-attachment: fixed;       
+            background-repeat: no-repeat;       
+        }
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .boxer {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .boxer img {
+            float: right;
+            width: 200px;        /* одинаковая ширина */
+            height: 250px;       /* одинаковая высота */
+            object-fit: cover;   /* аккуратно обрезает фото */
+            border-radius: 12px;
+            margin-left: 20px;
+        }
+        h2 {
+            color: #444;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        .status {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #006400;
+        }
+        .retired {
+            color: #8B0000;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+            margin-top: 30px;
+        }
+        /* Стили для символа и флага */
+        .logo-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;      
+            height: auto;
+            border: 2px solid white;  /* рамка */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .flag-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 200px;     
+            height: auto;
+            border: 2px solid white;  /* рамка */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        /* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .logo-left, .flag-right {
+    width: 60px;
+    top: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 0 8px;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+    </style>
+</head>
+<body>
+     <img src="kpbf.jpeg" alt="KPBF символ" class="logo-left">
+    <img src="flag.jpg" alt="Флаг Казахстана" class="flag-right">
+
+<header>
+    <h1>Известные боксёры Казахстана</h1>
+    <p>Лучшие представители казахстанского бокса</p>
+    <nav>
+  <a href="glavnaya.html">Главная</a>
+  <a href="boxers.html">Главные лица</a>
+  <a href="fights.html">Календарь боёв</a>
+  <a href="news.html">Свежие новости</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="equip.html">Экипировка</a>
+  <a href="avtor.html">Автор</a>
+</nav>
+<style>
+  nav {
+    background: #222; /* фон меню */
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;          /* цвет текста ссылок */
+    text-decoration: none; /* убрать подчеркивание */
+    margin: 0 10px;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: red;  /* цвет при наведении */
+  }
+</style>
+</header>
+
+<div class="container">
+
+
+    <!-- Геннадий Головкин -->
+    <div class="boxer">
+        <h2>Геннадий Головкин (GGG)</h2>
+        <img src="golovkin.jpeg" alt="Геннадий Головкин">
+        <p><b>Дата рождения:</b> 8 апреля 1982 года</p>
+        <p><b>Весовая категория:</b> Средний вес</p>
+        <p><b>Рекорд:</b> 45 боёв, 42 победы (37 нокаутом), 2 поражения, 1 ничья</p>
+        <h3>Достижения:</h3>
+        <ul>
+            <li>Чемпион мира по версиям WBA, WBC, IBF, IBO</li>
+            <li>Олимпийский серебряный призёр (Афины 2004)</li>
+            <li>Один из самых нокаутирующих боксёров в истории</li>
+        </ul>
+        <p class="status retired">Завершил карьеру</p>
+    </div>
+
+    <!-- Василий Жиров -->
+    <div class="boxer">
+        <h2>Василий Жиров</h2>
+        <img src="jirov.jpg" alt="Василий Жиров">
+        <p><b>Дата рождения:</b> 4 апреля 1974 года</p>
+        <p><b>Весовая категория:</b> Крузервейт</p>
+        <p><b>Рекорд:</b> 38 боёв, 37 побед (31 нокаутом), 3 поражения</p>
+        <h3>Достижения:</h3>
+        <ul>
+            <li>Олимпийский чемпион (Атланта 1996)</li>
+            <li>Чемпион мира IBF в первом тяжёлом весе</li>
+            <li>Лучший боксёр года по версии BWAA (1997)</li>
+        </ul>
+        <p class="status retired">Завершил карьеру</p>
+    </div>
+
+    <!-- Бейбут Шуменов -->
+    <div class="boxer">
+        <h2>Бейбут Шуменов</h2>
+        <img src="shumenov.jpg" alt="Бейбут Шуменов">
+        <p><b>Дата рождения:</b> 19 августа 1983 года</p>
+        <p><b>Весовая категория:</b> Полутяжёлый вес</p>
+        <p><b>Рекорд:</b> 21 бой, 18 побед (12 нокаутом), 3 поражения</p>
+        <h3>Достижения:</h3>
+        <ul>
+            <li>Чемпион мира по версии WBA в полутяжёлом весе</li>
+            <li>Чемпион мира по версии WBA в первом тяжёлом весе</li>
+        </ul>
+        <p class="status retired">Завершил карьеру</p>
+    </div>
+
+    <!-- Канат Ислам -->
+    <div class="boxer">
+        <h2>Канат Ислам</h2>
+        <img src="islam.jpg" alt="Канат Ислам">
+        <p><b>Дата рождения:</b> 13 сентября 1984 года</p>
+        <p><b>Весовая категория:</b> Первый средний вес</p>
+        <p><b>Рекорд:</b> 29 боёв, 28 побед (22 нокаутом), 1 поражение</p>
+        <h3>Достижения:</h3>
+        <ul>
+            <li>Бронзовый призёр Олимпийских игр (Афины 2004)</li>
+            <li>Чемпион Азии среди любителей</li>
+            <li>Интернациональный чемпион WBA</li>
+        </ul>
+        <p class="status">Действующий боксёр</p>
+    </div>
+
+    <!-- Жанибек Алимханулы -->
+    <div class="boxer">
+        <h2>Жанибек Алимханулы</h2>
+        <img src="alimkhanuly.jpg" alt="Жанибек Алимханулы">
+        <p><b>Дата рождения:</b> 1 апреля 1993 года</p>
+        <p><b>Весовая категория:</b> Средний вес</p>
+        <p><b>Рекорд:</b> 15 боёв, 15 побед (10 нокаутом), 0 поражений</p>
+        <h3>Достижения:</h3>
+        <ul>
+            <li>Чемпион мира по версии WBO в среднем весе</li>
+            <li>Чемпион Азии среди любителей</li>
+            <li>Участник Олимпийских игр (Рио 2016)</li>
+        </ul>
+        <p class="status">Действующий боксёр</p>
+    </div>
+
+    <!-- Серик Сапиев -->
+    <div class="boxer">
+        <h2>Серик Сапиев</h2>
+        <img src="sapiyev.jpg" alt="Серик Сапиев">
+        <p><b>Дата рождения:</b> 16 ноября 1983 года</p>
+        <p><b>Весовая категория:</b> Полусредний вес</p>
+        <p><b>Рекорд:</b> Выступал на любительском ринге</p>
+        <h3>Достижения:</h3>
+        <ul>
+            <li>Олимпийский чемпион (Лондон 2012)</li>
+            <li>Двукратный чемпион мира (2005, 2007)</li>
+            <li>Лучший боксёр Олимпиады (Кубок Вэла Баркера)</li>
+        </ul>
+        <p class="status retired">Завершил карьеру</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>Сайт о боксёрах Казахстана © 2025</p>
+</footer>
+
+</body>
+</html>

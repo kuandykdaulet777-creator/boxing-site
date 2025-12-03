@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Новости бокса Казахстана</title>
+<style>
+/* Общий стиль страницы */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Размытый фон */
+.bg-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("фон.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+/* Контент сайта */
+.content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* Шапка сайта */
+header {
+  background: linear-gradient(90deg, #222 0%, #444 100%);
+  color: white;
+  text-align: center;
+  padding: 25px 0 15px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Логотип и флаг */
+.logo-left, .flag-right {
+  position: absolute;
+  top: 15px;
+  width: 90px;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.7);
+  transition: transform 0.3s;
+}
+.logo-left:hover, .flag-right:hover {
+  transform: scale(1.1);
+}
+.logo-left { left: 20px; }
+.flag-right { right: 20px; }
+
+/* Навигация */
+nav {
+  margin-top: 10px;
+}
+nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff4444;
+  transition: width 0.3s;
+}
+nav a:hover {
+  color: #ff4444;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Контейнер новостей */
+.news-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Карточка новости */
+.news-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: 18px;
+}
+.news-content h2 {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+.news-content p {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.5;
+}
+.news-date {
+  font-size: 13px;
+  color: #ffbaba;
+  font-style: italic;
+}
+
+/* Кнопка "Читать далее" */
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: linear-gradient(90deg, #ff4444, #cc0000);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.read-more:hover {
+  box-shadow: 0 4px 12px rgba(255, 68, 68, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Подвал */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #aaa;
+  margin-top: 40px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .logo-left, .flag-right {
+    width: 60px;
+    top: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 0 8px;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Размытый фон -->
+<div class="bg-blur"></div>
+
+<!-- Контент сайта -->
+<div class="content">
+  <header>
+    <img src="kpbf.jpeg" alt="KPBF символ" class="logo-left">
+    <img src="flag.jpg" alt="Флаг Казахстана" class="flag-right">
+    <h1>Новости бокса Казахстана</h1>
+    <nav>
+      <a href="glavnaya.html">Главная</a>
+      <a href="boxers.html">Главные лица</a>
+      <a href="fights.html">Календарь боёв</a>
+      <a href="news.html">Свежие новости</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="equip.html">Экипировка</a>
+      <a href="avtor.html">Автор</a>
+    </nav>
+  </header>
+
+  <div class="news-container">
+    <div class="news-card">
+      <img src="alimkhanuly.jpg" alt="Алимханулы">
+      <div class="news-content">
+        <div class="news-date">5 апреля 2025</div>
+        <h2>Алимханулы выиграл бой</h2>
+        <p>Жанибек Алимханулы одержал уверенную победу над Анауэлем Нгамиссенже, показав характер и мастерство.</p>
+        <a href="https://zhaikpress.kz/ru/news/nokautom-zavershilsya-boj-zhanibeka-alimxanuly-za-dva-titula-chempiona-mira/" target="_blank" class="read-more">Читать далее</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="Ташкенбай.jpg" alt="Ташкенбай">
+      <div class="news-content">
+        <div class="news-date">6 июля 2025</div>
+        <h2>Ташкенбай — золото Кубка мира</h2>
+        <p>Санжар Ташкенбай стал победителем этапа Кубка мира по боксу в Астане, завоевав золото.</p>
+        <a href="https://kz.kursiv.media/2025-09-14/mgpz-sanzhar-tashkenbai-vyigral-zoloto-chm-2025-po-boksu/" target="_blank" class="read-more">Читать далее</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="Оралбай.jpg" alt="Оралбай">
+      <div class="news-content">
+        <div class="news-date">14 сентября 2025</div>
+        <h2>Оралбай в финале ЧМ-2025</h2>
+        <p>Айбек Оралбай прошёл в финал чемпионата мира по боксу 2025, подтвердив статус сильного бойца.</p>
+        <a href="https://olympic.kz/ru/article/34418-aybek-oralbay-vyigral-u-pyatikratnogo-chempiona-mira-i-vyshel-v-final-chm-po-boksu" target="_blank" class="read-more">Читать далее</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="Жанкош.jpeg" alt="Тураров">
+      <div class="news-content">
+        <div class="news-date">21 марта 2025</div>
+        <h2>Тураров взял титул в Алматы</h2>
+        <p>Жанкош Тураров нокаутировал своего противника и получил титул IBO в гала-вечер бокса в Алматы.</p>
+        <a href="https://www.inform.kz/ru/zhankosh-turarov-nokautiroval-ispanca-v-almaty-i-zavoeval-titul-ibo_a4012017" target="_blank" class="read-more">Читать далее</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Сайт о боксёрах Казахстана © 2025</p>
+  </footer>
+</div>
+
+</body>
+</html>

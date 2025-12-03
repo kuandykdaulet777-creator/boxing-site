@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Казахстанский Бокс — Экипировка</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-image: url("фон.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Верхняя часть */
+header {
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 50px 0 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+header h1 {
+  margin: 0;
+  font-size: 42px;
+  color: gold;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+header p {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* Навигация */
+nav {
+  background: linear-gradient(90deg, #111, #222);
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+/* Контент */
+section {
+  padding: 60px 10%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+/* Заголовок раздела */
+h2 {
+  text-align: center;
+  font-size: 36px;
+  color: gold;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  margin-bottom: 40px;
+}
+
+/* Сетка карточек */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Карточка экипировки */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.card h3 {
+  color: gold;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.card p {
+  color: #ddd;
+  font-size: 15px;
+}
+.card button {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+.card button:hover {
+  background: #ffea80;
+  transform: scale(1.1);
+}
+
+/* Нижняя часть */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 50px;
+}
+footer a {
+  color: gold;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .logo-left, .flag-right {
+    width: 60px;
+    top: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 0 8px;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Казахстанский Бокс</h1>
+  <p>Сила. Уважение. Традиции.</p>
+</header>
+
+<!-- Навигация связана со всеми страницами -->
+<nav>
+  <a href="glavnaya.html">Главная</a>
+  <a href="boxers.html">Главные лица</a>
+  <a href="fights.html">Календарь боёв</a>
+  <a href="news.html">Свежие новости</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="equip.html">Экипировка</a>
+  <a href="avtor.html">Автор</a>
+</nav>
+
+<section>
+  <h2>Экипировка для чемпионов</h2>
+  <div class="equipment-grid">
+    <div class="card">
+      <img src="Перчатки.png" alt="Боксерские перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p>Премиум-кожа, идеальная амортизация и защита рук во время спарринга.</p>
+      <a href="перчатки.html">
+      <button>Подробнее</button>
+      </a>
+    </div>
+    <div class="card">
+      <img src="Шлем.png" alt="Шлем">
+      <h3>Шлем защитный</h3>
+      <p>Максимальная безопасность и комфорт. Отлично подходит для тренировок.</p>
+      <a href="helmet.html">
+      <button>Подробнее</button>
+      </a>
+    </div>
+    <div class="card">
+      <img src="Бинты.png" alt="Бинты">
+      <h3>Бинты боксерские</h3>
+      <p>Прочные и эластичные бинты для фиксации кистей. Комфорт и защита.</p>
+      <a href="бинты.html">
+      <button>Подробнее</button>
+      </a>
+    </div>
+    <div class="card">
+      <img src="Ботинки.png"Боксерские ботинки">
+      <h3>Боксерские ботинки</h3>
+      <p>Легкие и устойчивые — идеальны для ринга. Поддержка и сцепление.</p>
+      <a href="ботинки.html">
+      <button>Подробнее</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Казахстанский Бокс. Все права защищены. 
+  
+</footer>
+
+</body>
+</html>
