@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Казахстанский Бокс — Главная</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-image: url("фон.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Верхняя часть */
+header {
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 50px 0 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+header h1 {
+  margin: 0;
+  font-size: 42px;
+  color: gold;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+header p {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* Навигация */
+nav {
+  background: linear-gradient(90deg, #111, #222);
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+/* Бегущая строка */
+.ticker {
+  background: gold;
+  color: black;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
+}
+.ticker span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ticker 20s linear infinite;
+  font-weight: bold;
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Афиша боя */
+.fight-banner {
+  width: 85%;
+  margin: 50px auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s;
+}
+.fight-banner:hover {
+  transform: scale(1.02);
+}
+.fight-banner h2 {
+  color: gold;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+.fight-banner p {
+  font-size: 18px;
+  color: #ddd;
+}
+.fight-banner a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: gold;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+.fight-banner a:hover {
+  background: orange;
+  transform: scale(1.05);
+}
+
+/* Боец недели */
+.featured {
+  width: 85%;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  padding: 25px;
+  backdrop-filter: blur(6px);
+}
+.featured img {
+  width: 350px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transition: transform 0.3s;
+}
+.featured img:hover {
+  transform: scale(1.05);
+}
+.featured-text h2 {
+  color: gold;
+  font-size: 26px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+.featured-text p {
+  color: #ddd;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* Карточки разделов */
+.container {
+  width: 85%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+}
+.card h2 {
+  color: gold;
+  font-size: 22px;
+}
+.card p {
+  color: #ccc;
+}
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.card a:hover {
+  background: orange;
+}
+
+/* Карта */
+.map-section {
+  width: 85%;
+  margin: 70px auto;
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+  backdrop-filter: blur(6px);
+}
+.map-section h2 {
+  color: gold;
+  font-size: 26px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+.map-section p {
+  color: #ddd;
+  margin-bottom: 20px;
+}
+.map-frame {
+  border: 3px solid gold;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.map-frame:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+}
+.map-frame iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Логотипы */
+.logo-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 90px;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+.flag-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 180px;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* Подвал */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  font-size: 14px;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.4);
+  margin-top: 60px;
+  /* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .logo-left, .flag-right {
+    width: 60px;
+    top: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 0 8px;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+}
+</style>
+</head>
+<body>
+
+<img src="kpbf.jpeg" alt="KPBF" class="logo-left">
+<img src="flag.jpg" alt="Флаг Казахстана" class="flag-right">
+
+<header>
+  <h1>Казахстанский Бокс</h1>
+  <p>Новости, бойцы и календарь — всё в одном месте</p>
+</header>
+
+<nav>
+  <a href="glavnaya.html">Главная</a>
+  <a href="boxers.html">Главные лица</a>
+  <a href="fights.html">Календарь боёв</a>
+  <a href="news.html">Свежие новости</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="equip.html">Экипировка</a>
+  <a href="avtor.html">Автор</a>
+</nav>
+
+<div class="ticker">
+  <span>🥊 Мейирим Нурсултанов готовится к титульному бою | 🥇 Жанкош Тураров вернулся на ринг | 🇰🇿 Батыр Джукембаев проведёт бой в декабре в Алматы</span>
+</div>
+
+<div class="fight-banner">
+  <h2>Ближайший бой</h2>
+  <p><strong>Батыр Джукембаев</strong> 🆚 <strong>Мигель Рамирес</strong></p>
+  <p>📅 12 декабря 2025 | 📍 Алматы, Казахстан</p>
+  <a href="fights.html">Подробнее</a>
+</div>
+
+<!-- Боец века -->
+<div class="featured">
+  <img src="golovkin.jpeg" alt="Геннадий Головкин">
+  <div class="featured-text">
+    <h2>Геннадий Головкин — Символ Силы и Точности</h2>
+    <p>💥 Его удары — это не просто сила, а математически выверенная точность.</p>
+    <p>🔥 В каждом поединке он демонстрировал железную волю и абсолютный контроль.</p>
+    <p>👑 Трёхкратный чемпион мира, вдохновивший поколение молодых боксёров.</p>
+    <div class="quote">«Я не ищу лёгких путей. Я ищу соперников, которые делают меня сильнее.»</div>
+  </div>
+</div>
+
+<div class="map-section">
+  <h2>📍 Боксерские клубы и академии Казахстана</h2>
+  <p>Нажмите на метки, чтобы узнать больше о клубах: фото, описание и ссылки на соцсети.</p>
+  <div class="map-frame">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.861229629536!2d76.89585627563267!3d43.21239988082974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f3b97f88e0b%3A0x63e324306047c28f!2sK2%20Boxing%20Club!5e0!3m2!1sru!2skz!4v1759906530295!5m2!1sru!2skz" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h2>👊Главные лица</h2>
+    <p>Узнай о легендах и восходящих звёздах бокса Казахстана.</p>
+    <a href="boxers.html">Подробнее</a>
+  </div>
+  <div class="card">
+    <h2>📅Календарь боёв</h2>
+    <p>Актуальные даты предстоящих и прошедших поединков.</p>
+    <a href="fights.html">Смотреть</a>
+  </div>
+  <div class="card">
+    <h2>📰 Свежие новости</h2>
+    <p>Будь в курсе последних событий в мире казахстанского бокса.</p>
+    <a href="news.html">Читать</a>
+  </div>
+</div>
+
+<footer>© 2025 Казахстанский Бокс. Все права защищены.</footer>
+
+</body>
+</html>
